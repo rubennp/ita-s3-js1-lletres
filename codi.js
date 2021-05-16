@@ -32,3 +32,4 @@ for (let c in nom) {
 }
 
 console.log(mNom);
+
