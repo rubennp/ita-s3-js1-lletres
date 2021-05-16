@@ -1,8 +1,8 @@
 // Exercici 1
 
-// let nom = ['R', 'u', 'b', '3', 'n'];
+let nom = ['R', 'u', 'b', 'è', 'n'];
 // let nom = ['A','l','e','j','a','n','d','r','o'];
-let nom = ['A','r','i','a','d','n','a'];
+// let nom = ['A','r','i','a','d','n','a'];
 
 for (let c in nom) console.log(nom[c]);
 
@@ -33,3 +33,10 @@ for (let c in nom) {
 
 console.log(mNom);
 
+// Exercici 4
+
+let cognom = ['N', 'i', 'e', 't', 'o'];
+
+let nomCognom = nom.concat(" ").concat(cognom);
+
+console.log(nomCognom);
