@@ -1,40 +1,45 @@
 // Exercici 1
 
-let nom = ['R', 'u', 'b', 'e', 'n'];
+let nom = ['R', 'u', 'b', '3', 'n'];
 
-for (let c in nom) console.log(nom[c]);
+// converteix a majúscules cada element de l'array
+Array.prototype.elToUpperCase = function() {
+    this.forEach(function (el, index, array) { 
+        array[index] = el.toUpperCase(); 
+    });
+};
+
+nom.elToUpperCase();
+
+nom.forEach(el => console.log(el));
 
 // Exercici 2
 
-console.log("Partim del nom " + nom.join('').toUpperCase());
+console.log(`Partim del nom ${nom.join('')}`);
 
-for (let c in nom) {
-    let ch = nom[c].toUpperCase();
+nom.forEach(ch => {
+    if (/[AÀÁEÈÉIÍOÒÓUÚ]/i.test(ch)) console.log(`He trobat la VOCAL: ${ch}`);
+    else if (/[0-9]/.test(ch)) console.log(`Els noms de persones no contenen el número: ${ch}`);
+    else console.log(`He trobat la CONSONANT: ${ch}`);
+});
     
-    if (/[AEIOU]/.test(ch))
-        console.log("He trobat la VOCAL: " + ch);
-    else if (ch >= '0' && ch <= '9') 
-        console.log("Els noms de persones no contenen el número: " + ch);
-    else 
-        console.log("He trobat la CONSONANT: " +  ch);
-}
 
 // Exercici 3
 
-let mNom = new Map();
+let mapNom = new Map();
 
-for (let c in nom) {
-    let ch = nom[c].toUpperCase();
-    if (mNom.has(ch))
-        mNom.set(ch, mNom.get(ch) + 1);
-    else mNom.set(ch, 1);
-}
+nom.forEach(ch => {
+    if (mapNom.has(ch)) mapNom.set(ch, mapNom.get(ch) + 1);
+    else mapNom.set(ch, 1);
+});
 
-console.log(mNom);
+console.log(mapNom);
 
 // Exercici 4
 
 let cognom = ['N', 'i', 'e', 't', 'o'];
+
+cognom.elToUpperCase();
 
 let nomCognom = nom.concat(" ").concat(cognom);
 
