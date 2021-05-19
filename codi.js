@@ -28,10 +28,7 @@ nom.forEach(ch => {
 
 let mapNom = new Map();
 
-nom.forEach(ch => {
-    if (mapNom.has(ch)) mapNom.set(ch, mapNom.get(ch) + 1);
-    else mapNom.set(ch, 1);
-});
+nom.forEach(ch => (mapNom.has(ch) ? mapNom.set(ch, mapNom.get(ch) + 1) : mapNom.set(ch, 1)));
 
 console.log(mapNom);
 
