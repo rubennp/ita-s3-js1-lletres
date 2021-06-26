@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html lang="ca">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="IT Academy - S3: JavaScript I - Lletres">
-        <meta name="keywords" content="JS, HTML5, CSS3">
-        <meta name="author" content="Rubèn Nieto Perarnau">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <!-- Estils-->
-        <!-- <link href="css/styles.css" rel="stylesheet" type="text/css"> -->
-    
-        <!-- Fira Font 900-->
-        <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet"> -->
-    
-        <!-- JS -->
-        <script src="codi.js"></script>
-    
-        <title>S3: Lletres</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="IT Academy - S3: JavaScript I - Lletres">
+    <meta name="keywords" content="JS, HTML5, CSS3">
+    <meta name="author" content="Rubèn Nieto Perarnau">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>S3: Lletres</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body class="m-5">
+    <main class="container p-5 align-content-center">
+            <form class="row row-cols-2 justify-content-center bg-light shadow-lg p-5" onsubmit="return saveNomCognom()" action="./pages/n3-0.html">
+                <div class="mb-3 col-12 col-md-6">
+                    <label for="fNom" class="form-label lead mb-0">El teu nom:</label>
+                    <input type="text" class="form-control" id="fNom" required />
+                </div>
+                <div class="mb-3 col-12 col-md-6">
+                    <label for="fCognom" class="form-label lead mb-0">El teu cognom:</label>
+                    <input type="text" class="form-control" id="fCognom" required />
+                </div>
+                <div class="mb-3 d-flex justify-content-end col-12">
+                    <button type="submit" class="btn btn-primary ">Guarda</button>
+                </div>
+            </form>
+            <div class="row">
+                <div class="mt-5 col">
+                    <p id="alert" class="text-center text-muted lead"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    <!-- El meu JS -->
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
 </html>
